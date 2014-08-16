@@ -13,6 +13,8 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false
+  gem 'spork-rails'
+  gem 'spork', github: 'manafire/spork', branch: 'rspec3_runner'
 end
 
 group :test do
