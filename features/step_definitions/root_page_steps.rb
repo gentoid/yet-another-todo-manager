@@ -7,6 +7,7 @@ end
 
 Then /^I see short description and nice screenshot$/ do
   expect(page).to have_content('Yet another TODO manager')
+  expect(page).to have_selector('.screenshot')
 end
 
 Given /^I am logged in$/ do
