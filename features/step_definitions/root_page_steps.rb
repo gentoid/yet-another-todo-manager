@@ -11,7 +11,10 @@ Then /^I see short description and nice screenshot$/ do
 end
 
 Given /^I am logged in$/ do
-  pending
+  include Warden::Test::Helpers
+  Warden.test_mode!
+
+
 end
 
 Then /^Application redirects me to my dashboard$/ do
