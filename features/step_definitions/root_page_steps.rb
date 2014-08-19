@@ -11,12 +11,14 @@ Then /^I see short description and nice screenshot$/ do
 end
 
 Given /^I am logged in$/ do
-  include Warden::Test::Helpers
   Warden.test_mode!
 
+  user = FactoryGirl.create :user
+  login_as user, scope: :user
 
+  Warden.test_reset!
 end
 
 Then /^Application redirects me to my dashboard$/ do
-  pending
+  expect(page).to redirect_to(dashboard_path)
 end
