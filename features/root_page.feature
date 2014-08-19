@@ -8,7 +8,6 @@ Feature: root page
     When I open root page
     Then I see short description and nice screenshot
 
-  @wip
   Scenario: Authenticated user opens root page
     Given I am logged in
     When I open root page

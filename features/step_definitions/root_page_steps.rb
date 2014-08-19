@@ -15,10 +15,8 @@ Given /^I am logged in$/ do
 
   user = FactoryGirl.create :user
   login_as user, scope: :user
-
-  Warden.test_reset!
 end
 
 Then /^Application redirects me to my dashboard$/ do
-  expect(page).to redirect_to(dashboard_path)
+  expect(current_path).to eq(dashboard_path)
 end
